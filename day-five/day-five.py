@@ -4,7 +4,7 @@ with open('day5.txt') as f:
 def get_seat_number(string, low, high):
     for char in string:
         if char == 'F' or char == 'L':
-            high = round((high-low)/2) + low
+            high = (high-low)/2 + low
         if char == 'B' or char == 'R':
             low = high -  (high-low)/2
     return min(low,high)
